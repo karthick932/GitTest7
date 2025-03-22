@@ -1,0 +1,65 @@
+name: Project7
+version: 2
+projectReferences: 
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /Project7/src
+        type: javaClasspath
+  - name: UITestScript7.recdata
+  - name: UITestScript7.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Project7/UITestScript7.recdata
+        type: recsessionRecdata
+  - name: UITestScript7.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.4.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1F00560CC413470EE84E46666633566
+    dependencies: 
+      - path: /Project7/UITestScript7.recsession
+        type: testRecsession
+      - path: /Project7/pectran_com_8df.ma
+        type: test#moeb.applicationPackage
+  - name: UITestScript7_1742457409126.stats
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1742457409126
+      tags: 
+      testId: A1F00560CC413470EE84E46666633566
+      testName: UITestScript7
+    dependencies: 
+      - path: /Project7/UITestScript7.testsuite
+        type: statsSessionTest
+      - path: /Project7/UITestScript7_1742457409126.xmoebreport
+        type: statsSessionAsset
+      - path: /Project7/UITestScript7_1742457409126_orch!system.mstats
+        type: statsSessionStore
+      - path: /Project7/UITestScript7_1742457409126_orch!system.rstats
+        type: statsSessionStore
+      - path: /Project7/UITestScript7_1742457409126_perf!localhost.mstats
+        type: statsSessionStore
+      - path: /Project7/UITestScript7_1742457409126_perf!localhost.rstats
+        type: statsSessionStore
+      - path: /Project7/UITestScript7_1742457409994.executiondlr
+        type: statsSessionAsset
+  - name: UITestScript7_1742457409126.xmoebreport
+  - name: UITestScript7_1742457409126_orch!system.mstats
+  - name: UITestScript7_1742457409126_orch!system.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: UITestScript7_1742457409126_perf!localhost.mstats
+  - name: UITestScript7_1742457409126_perf!localhost.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: UITestScript7_1742457409994.executiondlr
+  - name: pectran_com_8df.ma
+    type: moeb.applicationPackage
+  - name: src
+    resources: 
+      - name: test
+        resources: 
+          - name: UITestScript7_Test_A1F00560CC413470EE84E46666633566.java
+            type: com.ibm.rational.test.lt.generatedCode
